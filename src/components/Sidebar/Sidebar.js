@@ -4,11 +4,7 @@ import '../../css/navbar.css'
 
 function Sidebar({ items }) {
     const itemType = (item, index) => {
-        if (item.items) {
-            return <SidebarItem item={item} key={index} />;
-        } else {
-            return <SidebarItem item={item} key={index} />;
-        }
+        return <SidebarItem item={item} key={index} />;
     };
 
     const navItems = items => {
@@ -18,7 +14,6 @@ function Sidebar({ items }) {
         <nav className="pro-sidebar">
             <ul className="nav-menu-items">
                 {navItems(items.navs)}
-                {/* <SidebarItem item={items.nav}/> */}
             </ul>
         </nav>
     );
