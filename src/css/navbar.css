@@ -74,16 +74,16 @@
     border-radius: 4px;
   }
 
-  .nav.text .menu-expand-icon {
+  .nav-text li .menu-expand-icon{
     margin-right: 0;
     line-height: 20px;
     font-size: 11px;
     position: absolute;
-    right: 20px;
+    right: 100px;
     top: 16px;
     transform: rotate(0deg);
   }
 
-  .nav.text.open .menu-expand-icon {
+  .nav-text.open li .menu-expand-icon {
     transform: rotate(90deg);
   }
