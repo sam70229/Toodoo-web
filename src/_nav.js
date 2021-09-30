@@ -7,7 +7,7 @@ export default {
         },
         {
             name: 'test2',
-            label: 'Test 2',
+            label: 'test2',
             items: [
                 { 
                     name: 'test2 sub1',
