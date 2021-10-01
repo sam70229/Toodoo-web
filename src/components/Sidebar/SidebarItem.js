@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import { NavLink } from 'react-router-dom';
 import * as Feather from 'react-feather';
+import SidebarSingleItem from './SidebarSignleItem';
 
 class SidebarItem extends Component {
     constructor(props) {
@@ -14,40 +14,33 @@ class SidebarItem extends Component {
         this.setState(prevStat => ({open: !prevStat.open}));
         e.preventDefault();
         e.stopPropagation();
-    }
+    };
 
     render() {
         const { item } = this.props;
         const isExpanded = this.state.open ? "open" : "";
         const ExpandIcon = this.state.open ? Feather.ChevronDown : Feather.ChevronRight;
         
-        if (item.url) {
+        if (item.items) {
             return (
-                <li className="nav-text">
-                    <NavLink to={item.url}>
-                        {item.name}
-                    </NavLink>
-                    {/* <a href="#" onClick={ () => {this.setState({open: !this.state.open})}}>{item.label}</a> */}
-                </li>
-            )
-        } else {
-            return (
-                <>
-                    <li className={`nav-text ${isExpanded}`}>
-                        <a href="#!" role="button" onClick={this.toggle}>
-                            {item.name}
-                        </a>
+                <li className={`nav-item has-submenu ${isExpanded}`}>
+                    <a href="#!" role="button" onClick={this.toggle}>
+                        <span className="nav-item-label">{item.name}</span>
                         <ExpandIcon className="menu-expand-icon" />
-                    </li>
+                    </a>
                     {(this.state.open && item.items) && (
-                        <ul>
+                        <ul className="nav-submenu">
                             {item.items.map((subItem, index) => (
-                                    <SidebarItem key={index} item={subItem}/>
+                                <SidebarItem key={index} item={subItem}/>
                             ))}
                         </ul>
                     )}
-                </>
+                </li>
             );
+        } else {
+            return (
+                <SidebarSingleItem item={item} />
+            )
         }
     }
 };
