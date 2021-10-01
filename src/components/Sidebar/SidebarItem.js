@@ -16,11 +16,11 @@ class SidebarItem extends Component {
         e.stopPropagation();
     }
 
-
     render() {
         const { item } = this.props;
         const isExpanded = this.state.open ? "open" : "";
         const ExpandIcon = this.state.open ? Feather.ChevronDown : Feather.ChevronRight;
+        
         if (item.url) {
             return (
                 <li className="nav-text">

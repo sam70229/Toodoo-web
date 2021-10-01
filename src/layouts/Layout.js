@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Switch, Route } from "react-router-dom";
+import { Switch, Route, Redirect } from "react-router-dom";
 import Sidebar from "../components/Sidebar/Sidebar";
 import logo from '../logo.svg';
 import '../App.css';
@@ -32,6 +32,7 @@ export default class Layout extends Component {
                         {routes.map((page, key) => 
                             <Route path={page.url} render={() => <page.component />} key={key}/>
                         )}
+                        <Redirect from="/" to="/react-app/"/>
                     </Switch>
                 </PageContent>
             </div>
