@@ -7,7 +7,7 @@ const SidebarSignleItem = ({ item }) => {
 
     return (
         <li className="nav-item">
-            <NavLink to={url} activeClassName="active" inactiveClassName="">
+            <NavLink to={url} activeClassName="active">
                 <span className="nav-item-label">{item.name}</span>
             </NavLink>
         </li>
