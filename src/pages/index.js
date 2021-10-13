@@ -1,3 +1,4 @@
+import Settings from './Settings';
 import Test1 from './Test1';
 import Test2 from './Test2';
 
@@ -7,14 +8,19 @@ const pageList = [
     //     url: "/",
     // },
     {
-        name: "test2 sub1",
+        name: "category 1",
         url: "/test1",
         component: Test1
     },
     {
-        name: "test2 sub2 sub2",
+        name: "category 2",
         url: "/test2",
         component: Test2
+    },
+    {
+        name: "Settings",
+        url: "/settings",
+        component: Settings
     }
 
 ];

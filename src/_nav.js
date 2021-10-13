@@ -6,26 +6,25 @@ export default {
             url: '/react-app/'
         },
         {
-            name: 'test2',
-            label: 'test2',
+            name: 'Category',
+            label: 'Category',
             items: [
                 { 
-                    name: 'test2 sub1',
-                    label: 'test2 sub1',
+                    name: 'category 1',
+                    label: 'category 1',
                     url: "/test1"
                 },
                 {
-                    name: 'test2 sub2',
-                    label: 'test2 sub2',
-                    items: [
-                        { 
-                            name: "test2 sub2 sub1",
-                            label: "test2 sub2 sub1",
-                            url: "/test2"
-                        }
-                    ]
+                    name: 'category 2',
+                    label: 'category 2',
+                    url: "/test2"
                 }                
             ]
+        },
+        {
+            name: 'Settings',
+            label: 'Settings',
+            url: '/settings'
         }
     ]
 };

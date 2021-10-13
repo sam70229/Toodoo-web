@@ -1,10 +1,10 @@
 import React from 'react';
 
-export default function Test1() {
+export default function Settings() {
     return (
         <React.Fragment>
             <h1>
-                This is for category 1
+                This is for settings
             </h1>
         </React.Fragment>
     )
